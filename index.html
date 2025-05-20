@@ -8,13 +8,13 @@
     <link rel="icon" href="img/genone logo.png" type="image/png">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
 
 <body>
-    <!-- <div id="loader">
-        <img src="img/genone logo.png" alt="Loading..." />
-    </div> -->
+    <div id="loader">
+        <img src="img/genone logo.png" alt="Loading..." class="logo-loading" />
+    </div>
     <div class="container">
         <header class="header">
             <img src="img/genone.webp" alt="GenOne" class="genone">
@@ -34,7 +34,7 @@
                 <div class="testimoni active">
                     <div class="testimoni-wrapper">
                         <div class="profile-pic-wrapper">
-                            <img src="img/pap1.png" alt="User" class="profile-pic">
+                            <img src="img/foto1.JPG" alt="User" class="profile-pic">
                         </div>
                         <div class="testimoni-box">
                             <h4>Abie Ikra Negara</h4>
@@ -50,7 +50,7 @@
                 <div class="testimoni">
                     <div class="testimoni-wrapper">
                         <div class="profile-pic-wrapper">
-                            <img src="img/pap2.jpg" alt="User" class="profile-pic">
+                            <img src="img/foto2.JPG" alt="User" class="profile-pic">
                         </div>
                         <div class="testimoni-box">
                             <h4>Nadia Putri</h4>
@@ -66,7 +66,7 @@
                 <div class="testimoni">
                     <div class="testimoni-wrapper">
                         <div class="profile-pic-wrapper">
-                            <img src="img/pap3.jpg" alt="User" class="profile-pic">
+                            <img src="img/foto3.JPG" alt="User" class="profile-pic">
                         </div>
                         <div class="testimoni-box">
                             <h4>Rizky Ardiansyah</h4>
@@ -82,7 +82,7 @@
                 <div class="testimoni">
                     <div class="testimoni-wrapper">
                         <div class="profile-pic-wrapper">
-                            <img src="img/pap4.jpg" alt="User" class="profile-pic">
+                            <img src="img/foto4.JPG" alt="User" class="profile-pic">
                         </div>
                         <div class="testimoni-box">
                             <h4>Sinta Maharani</h4>
@@ -98,7 +98,7 @@
                 <div class="testimoni">
                     <div class="testimoni-wrapper">
                         <div class="profile-pic-wrapper">
-                            <img src="img/pap5.jpg" alt="User" class="profile-pic">
+                            <img src="img/foto5.JPG" alt="User" class="profile-pic">
                         </div>
                         <div class="testimoni-box">
                             <h4>Agung Pratama</h4>
@@ -379,6 +379,21 @@
             </div>
         </section>
     </div>
+
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            const content = document.querySelector(".container");
+            // Tambahkan delay agar terlihat
+            setTimeout(() => {
+                loader.style.opacity = 0;
+                setTimeout(() => {
+                    loader.style.display = "none";
+                    content.style.display = "block";
+                }, 500); // waktu untuk fade-out
+            }, 1500); // durasi loading (2.5 detik)
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
