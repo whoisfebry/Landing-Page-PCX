@@ -27,7 +27,7 @@ body {
     transition: opacity 0.5s ease;
 }
 
-.logo-loading {
+/* .logo-loading {
     width: 100px;
     height: auto;
     animation: pulse 1.5s infinite ease-in-out;
@@ -48,7 +48,7 @@ body {
         transform: scale(1);
         opacity: 1;
     }
-}
+} */
 
 .header {
     display: flex;
@@ -958,4 +958,30 @@ form button:hover {
     font-size: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 15px;
+}
+
+.wa-chat-button {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    background-color: #64B161;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.wa-chat-button:hover {
+    background-color: #1ebe5b;
+}
+
+.wa-chat-button .wa-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }
