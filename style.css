@@ -13,7 +13,7 @@ body {
     position: relative;
 }
 
-#loader {
+/* #loader {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@ body {
     transition: opacity 0.5s ease;
 }
 
-/* .logo-loading {
+.logo-loading {
     width: 100px;
     height: auto;
     animation: pulse 1.5s infinite ease-in-out;
@@ -961,9 +961,9 @@ form button:hover {
 }
 
 .wa-chat-button {
-    position: absolute;
-    bottom: 60px;
-    right: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: calc(50% - 250px + 20px);
     background-color: #64B161;
     color: white;
     font-weight: bold;
@@ -974,6 +974,7 @@ form button:hover {
     text-decoration: none;
     z-index: 1000;
     transition: background-color 0.3s ease;
+    width: max-content;
 }
 
 .wa-chat-button:hover {
