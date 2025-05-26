@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <!-- <div id="loader">
-        <img src="img/genone logo.png" alt="Loading..." class="logo-loading" />
-    </div> -->
+    <div id="loader">
+        <img src="img/genone logo.webp" alt="Loading..." class="logo-loading" />
+    </div>
     <div class="container">
         <header class="header">
             <img src="img/genone.webp" alt="GenOne" class="genone">
@@ -253,6 +253,8 @@
                 <form>
                     <label for="nama">Nama</label>
                     <input type="text" id="nama" name="nama" placeholder="Tulis nama" required>
+                    <label for="no_hp">Nomor Hp</label>
+                    <input type="text" id="no_hp" name="no_hp" placeholder="Tulis nomor hp" required>
                     <label for="kota">Pilih Kabupaten/Kota</label>
                     <select id="kota" name="kota" required>
                         <option value="">Pilih...</option>
@@ -386,7 +388,7 @@
         </a>
     </div>
 
-    <!-- <script>
+    <script>
         window.addEventListener("load", function () {
             const loader = document.getElementById("loader");
             const content = document.querySelector(".container");
@@ -399,7 +401,7 @@
                 }, 500); // waktu untuk fade-out
             }, 1500); // durasi loading (2.5 detik)
         });
-    </script> -->
+    </script>
 
     <script src="script.js"></script>
 </body>
