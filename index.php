@@ -9,12 +9,49 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
+<?php
+if (isset($_GET['status'])) {
+    echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {";
+
+    if ($_GET['status'] === 'sukses') {
+        echo "
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil!',
+                text: 'Data berhasil dikirim.',
+                confirmButtonText: 'OK',
+                width: '400px'
+            }).then(() => {
+                window.history.replaceState(null, null, window.location.pathname);
+            });
+        ";
+    } elseif ($_GET['status'] === 'gagal') {
+        echo "
+            Swal.fire({
+                icon: 'error',
+                title: 'Gagal!',
+                text: 'Data gagal dikirim.',
+                confirmButtonText: 'OK',
+                width: '400px'
+            }).then(() => {
+                window.history.replaceState(null, null, window.location.pathname);
+            });
+        ";
+    }
+
+    echo "});
+    </script>";
+}
+?>
+
 <body>
-    <div id="loader">
+    <!-- <div id="loader">
         <img src="img/genone logo.webp" alt="Loading..." class="logo-loading" />
-    </div>
+    </div> -->
     <div class="container">
         <header class="header">
             <img src="img/genone.webp" alt="GenOne" class="genone">
@@ -250,7 +287,7 @@
         <section class="form-section">
             <div class="form-container">
                 <h2>Cuma butuh semenit, buat hidup lo lebih nyaman tanpa pegal di jalan</h2>
-                <form>
+                <form action="simpan.php" method="POST" class="card p-4 shadow">
                     <label for="nama">Nama</label>
                     <input type="text" id="nama" name="nama" placeholder="Tulis nama" required>
                     <label for="no_hp">Nomor Hp</label>
@@ -388,8 +425,8 @@
         </a>
     </div>
 
-    <script>
-        window.addEventListener("load", function () {
+    <!-- <script>
+        window.addEventListener("load", function() {
             const loader = document.getElementById("loader");
             const content = document.querySelector(".container");
             // Tambahkan delay agar terlihat
@@ -401,7 +438,7 @@
                 }, 500); // waktu untuk fade-out
             }, 1500); // durasi loading (2.5 detik)
         });
-    </script>
+    </script> -->
 
     <script src="script.js"></script>
 </body>
